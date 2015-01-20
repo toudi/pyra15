@@ -19,7 +19,6 @@ def brands():
 @route('/cars')
 def cars():
     response.content_type = "application/json"
-    print(_cars)
     return json.dumps(_cars)
 
 @route('/cars', method='UPDATE')
