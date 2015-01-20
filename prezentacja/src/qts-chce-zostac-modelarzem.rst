@@ -172,14 +172,21 @@ Czyli o tym, jak stworzyć dynamiczny model
 
 ----
 
+:id: delegate
+
 Pokrywamy domyślną edycję w tabelce
 ===================================
+
+Kod sponsorują:
+
+* metoda flags()
+* role Qt::EditRole i Qt::DisplayRole
 
 .. code:: python
 
     class CarBrand(AbstractModel):
         columns = (
-            ("id", "ID", {"hidden": True}),
+            ("id", "ID"),
             ("name", "Nazwa",)
         )
 
@@ -189,6 +196,10 @@ Pokrywamy domyślną edycję w tabelce
             ("brand", "Marka")
         )
         model_mapping = {"brand": CarBrand}
+
+.. note::
+    Implementacja metody 'flags' na modelu pozwala na edycję od razu w tabelce
+    Domyslna implementacja tej metody na to nie zezwala.
 
 ----
 

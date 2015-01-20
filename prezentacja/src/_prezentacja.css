@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Lato";
+  src: url(fonts/Lato-Light.ttf) format("truetype");
+}
+
+body {
+    font-size: 32px;
+    font-family: Lato;
+    background: radial-gradient(#f0f0f0, #bebebe);
+}
+
+#intro h1 {
+    float: right;
+}
+
+#qt5-doc { text-align: left}
+#delegate pre {
+    font-size: 70%;
+}
+
+#model-intro {
+    text-align: center;
+}
+
+#model-intro h1 {
+    text-align: left;
+}
