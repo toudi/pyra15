@@ -17,7 +17,9 @@ Mateusz Mikołajczyk, PYRA, 30.01.2015
 
 .. note::
     Jako, że prezentacja w całości poświęcona jest pythonowi, ...
+
     ... powiem o swojej firmie
+
     pracownicy AYA Ghana
 
 ----
@@ -42,8 +44,8 @@ Mateusz Mikołajczyk, PYRA, 30.01.2015
 
 ----
 
-:data-z: 3000
-:data-scale: 1
+:data-rotate-y: 90
+:data-y: 600
 
 :id: terminal
 
@@ -52,14 +54,14 @@ Mateusz Mikołajczyk, PYRA, 30.01.2015
 .. note::
     tak wygląda praca przy terminalu
 
+    sami piszemy firmware na urządzenia
+
+    drukowanie fontów a endianess
+
 ----
 
-Skąd pomysł na temat?
-=====================
-
-:data-x: r1600
+:data-y: r1600
 :data-rotate-x: 90
-:data-z: r0
 
 .. image:: images/lavare.jpg
 .. note::
@@ -71,8 +73,6 @@ Skąd pomysł na temat?
 Qt + Python
 ===========
 
-:data-x: r1600
-
 Dostępne dowiązania
 
 * PyQt [Qt 4/5] (GPL)
@@ -81,6 +81,9 @@ Dostępne dowiązania
 .. note::
     * różnice licencyjne
     * jeśli ktoś chciałby użyć C++ - w Qt5 jest wbudowany moduł JSON
+    * nacisk na Qt Quick i QML
+    * w Qt5 wprowadzono wsparcie dla akceleracji sprzetowej przy wyswietlaniu grafiki
+    * Qt5 koncentruje się na urządzeniach mobilnych
 
 ----
 
@@ -106,9 +109,9 @@ PyQt5
             # ...
 
 .. note:: 
-    Niech nikogo nie zdziwi fakt, że dokumentacja do PyQt5 może być niekompletna.
-    Nie trzeba bać się odnośnika do dokumentacji od C++.
-    Translacja jest bardzo prosta
+    * Niech nikogo nie zdziwi fakt, że dokumentacja do PyQt5 może być niekompletna.
+    * Nie trzeba bać się odnośnika do dokumentacji od C++.
+    * Translacja jest bardzo prosta
 
 ----
 
@@ -120,9 +123,19 @@ Co to jest model?
 .. image:: images/modelview-overview.png
 
 .. note::
-    model trzyma nasze dane
-    podczas edycji uaktywnia się delegate
-    renderowaniem danych zajmuje się widok
+    * model trzyma nasze dane
+    * podczas edycji uaktywnia się delegate
+    * renderowaniem danych zajmuje się widok
+
+----
+
+Co to jest model? (cd)
+======================
+
+.. image:: images/modelview-models.png
+
+.. note::
+    odpowiednik tabelki to dict
 
 ----
 
@@ -131,12 +144,22 @@ Co to jest model?
 .. note::
     enough is enough!
 
+    idea przykładów: pokazać, jak za pomocą małych kroków na końcu osiągnąć funkcjonalność.
+
+    każdy kolejny kod jest drobną modyfikacją poprzedniego
+
 ----
 
 Do czego służą role?
 ====================
 
+.. image:: images/roles.svg
+
 (kod nr. 2)
+
+.. note::
+    * przykład: jedna kolumna (podatek VAT w produkcie) - 0.23 oraz 23%
+    * przykład: klucz obcy (wyświetlamy tekstową reprezentację a wartość to id)
 
 ----
 
